@@ -1,5 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from . import models
+
 # Create your views here.
 def index(request):
-    return HttpResponse("test")
+    items = models.Portfolio.objects.all()
+    return render(request, "portfolio/index.html", {"items": items})
