@@ -6,3 +6,6 @@ class Portfolio(models.Model):
     item_title = models.CharField(max_length=20)
     item_content = models.TextField()
     github_link = models.URLField(max_length=200)
+
+    def __str__(self):
+        return self.item_title
