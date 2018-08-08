@@ -9,5 +9,10 @@ class AdminPortfolio(admin.ModelAdmin):
         'item_title',
         'thumnail_image',
         'item_content',
-        'github_link',
+        'item_link',
+    )
+    
+    list_display_links = (
+        'item_title',
+        'item_content',
     )
